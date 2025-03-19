@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PIREPs Index</title>
+  <style>
+    /* Background Image (semi-transparent) */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("pilotpirepcockpit1.jpeg") no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.5; /* 0 = transparent, 1 = opaque */
+      z-index: -1;
+    }
+
+    /* Fullscreen Start Screen */
+    #page0 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white; /* or transparent if you prefer */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    #startButton {
+      font-size: 100px;
+      font-weight: bold;
+      color: white;
+      background-color: red;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fullscreen Start Screen -->
+  <div id="page0">
+    <button id="startButton">START</button>
+  </div>
+
+  <script>
+    // When the START button is clicked, go to page1.htm
+    document.getElementById("startButton").addEventListener("click", function() {
+      window.location.href = "page1.htm";
+    });
+  </script>
+</body>
+</html>
